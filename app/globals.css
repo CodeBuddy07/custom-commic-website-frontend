@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -21,5 +21,29 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mySwiper {
+  padding-bottom: 2rem;
+}
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  content: none;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mySwiper {
+    padding-bottom: 1.5rem;
+  }
 }

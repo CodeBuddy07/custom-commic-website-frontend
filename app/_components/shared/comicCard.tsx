@@ -38,7 +38,7 @@ const ComicCard = ({
 
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full max-w-80">
       <div className="relative group overflow-hidden bg-gray-100">
         {discount > 0 && (
           <div className="absolute top-3 left-3 bg-red-600 text-white px-3 py-1 rounded text-sm font-bold z-10">
