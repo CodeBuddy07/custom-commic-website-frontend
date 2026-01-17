@@ -6,7 +6,7 @@ import TestimonialCard from "./_components/shared/testimonialCard";
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <ComicCard
+      {/* <ComicCard
         id="1"
         image="/dummy-comic-1.png"
         title="Brave and the Bold (1955 1st Series DC) #28 CGC"
@@ -23,7 +23,7 @@ export default function Home() {
         avatar="/male_model.jpg"
         review="Amazing collection! I found a rare comic I was searching for years. Packaging and delivery were perfect."
         rating={4}
-      />
+      /> */}
     
       <HeroBanner />
 
