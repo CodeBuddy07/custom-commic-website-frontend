@@ -10,7 +10,7 @@ import TestimonialCard from '../shared/testimonialCard';
 const Testimonial = () => {
 
     return (
-        <section className='bg-white py-12 sm:py-16 md:py-20 px-0 w-full'>
+        <section className='bg-gray-50 py-12 sm:py-16 md:py-20 px-0 w-full'>
             <div className="w-full">
 
                 <div className="mb-12 sm:mb-14 md:mb-16 text-center px-4 sm:px-6">
