@@ -1,5 +1,5 @@
 import EraCard from "../EraCard/EraCard";
-import SectionHeading from "../SectionHeading/SectionHeading";
+import SectionHeading from "../shared/SectionHeading";
 
 const BrowseByEra = () => {
   const eras = [

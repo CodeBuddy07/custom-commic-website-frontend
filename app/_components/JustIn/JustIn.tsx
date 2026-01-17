@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import SectionHeading from '../shared/SectionHeading';
 
 
 const JustIn = () => {
@@ -12,14 +13,10 @@ const JustIn = () => {
         <section className='bg-gray-50 py-8 sm:py-12 md:py-16 px-4 w-full'>
             <div className="max-w-7xl mx-auto">
 
-                {/* <div className="mb-8 sm:mb-10 md:mb-12">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-                        Just In
-                    </h2>
-                    <p className="text-gray-600 text-sm sm:text-base mt-2">
-                        Fresh arrivals from trusted sellers
-                    </p>
-                </div> */}
+                <SectionHeading
+                 title="Just In"
+                 link='#'
+                 />
 
                 <div className="">
                     <Swiper
