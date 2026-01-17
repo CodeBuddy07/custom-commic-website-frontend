@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
+import BackToHomeButton from "../_components/BackToHomeButton";
 
 export default function ResetPasswordPage() {
   const [formData, setFormData] = useState({
@@ -8,7 +10,7 @@ export default function ResetPasswordPage() {
   });
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (e: any) => {
     setFormData({
@@ -25,7 +27,7 @@ export default function ResetPasswordPage() {
   };
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: Record<string, string> = {};
 
     if (formData.newPassword.length < 8) {
       newErrors.newPassword = "Password must be at least 8 characters";
@@ -51,7 +53,8 @@ export default function ResetPasswordPage() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2 flex items-start">
+            <BackToHomeButton />
             Create new password
           </h1>
           <p className="text-gray-600 text-sm">
