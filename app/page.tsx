@@ -1,5 +1,8 @@
 "use client";
 import HeroBanner from "./_components/Banner/HeroBanner";
+import BrowseByEra from "./_components/BrowseByEra/BrowseByEra";
+import ComicCard from "./_components/shared/comicCard";
+import TestimonialCard from "./_components/shared/testimonialCard";
 import JustIn from "./_components/JustIn/JustIn";
 
 export default function Home() {
@@ -8,9 +11,12 @@ export default function Home() {
 
 
 
+
       <HeroBanner />
 
       <JustIn />
+
+      <BrowseByEra />
 
     </div>
   );
