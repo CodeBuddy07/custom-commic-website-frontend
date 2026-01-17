@@ -8,7 +8,7 @@ interface TestimonialCardProps {
   name: string;
   avatar: string;
   review: string;
-  rating: number; // 1-5
+  rating: number;
 }
 
 const TestimonialCard = ({
@@ -19,38 +19,38 @@ const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="bg-white rounded-lg p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-      {/* Header with Avatar and Name */}
-      <div className="flex items-center gap-4 mb-6">
+    <div className="bg-white rounded-lg p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 h-full flex flex-col">
+      <div className="flex items-center gap-3 mb-4">
         <Image
           src={avatar}
           alt={name}
-          width={60}
-          height={60}
-          className="rounded-full object-cover w-12 h-12 md:w-16 md:h-16"
+          width={50}
+          height={50}
+          className="rounded-full object-cover w-10 h-10 sm:w-12 sm:h-12 shrink-0"
         />
-        <h3 className="font-bold text-gray-900 text-lg md:text-xl">{name}</h3>
+        <div className="min-w-0">
+          <h3 className="font-semibold text-gray-900 text-sm sm:text-base truncate">{name}</h3>
+          <p className="text-gray-500 text-xs">Verified Buyer</p>
+        </div>
       </div>
 
-      {/* Review Text */}
-      <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 italic">
-        &quot;{review}&quot;
-      </p>
-
-      {/* Star Rating */}
-      <div className="flex gap-2">
+      <div className="flex gap-1 mb-3">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            size={24}
+            size={16}
             className={`${
               star <= rating
                 ? 'fill-yellow-400 text-yellow-400'
                 : 'fill-gray-300 text-gray-300'
-            }`}
+            } shrink-0`}
           />
         ))}
       </div>
+
+      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed grow">
+        {review}
+      </p>
     </div>
   );
 };
