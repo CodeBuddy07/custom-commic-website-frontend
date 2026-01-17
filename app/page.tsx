@@ -1,11 +1,12 @@
 "use client";
 import HeroBanner from "./_components/Banner/HeroBanner";
+import BrowseByEra from "./_components/BrowseByEra/BrowseByEra";
 import ComicCard from "./_components/shared/comicCard";
 import TestimonialCard from "./_components/shared/testimonialCard";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="min-h-screen  bg-zinc-50 font-sans dark:bg-black">
       {/* <ComicCard
         id="1"
         image="/dummy-comic-1.png"
@@ -24,9 +25,9 @@ export default function Home() {
         review="Amazing collection! I found a rare comic I was searching for years. Packaging and delivery were perfect."
         rating={4}
       /> */}
-    
-      <HeroBanner />
 
+      <HeroBanner />
+      <BrowseByEra />
     </div>
   );
 }
