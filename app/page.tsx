@@ -1,5 +1,6 @@
 'use client'
 import ComicCard from "./_components/shared/comicCard";
+import TestimonialCard from "./_components/shared/testimonialCard";
 
 export default function Home() {
   return (
@@ -13,6 +14,14 @@ export default function Home() {
         discount={12}
         isFavorite={false}
         onFavoriteToggle={(id) => console.log('Favorite:', id)}
+      />
+
+      <TestimonialCard
+        id="1"
+        name="Rakib"
+        avatar="/male_model.jpg"
+        review="Amazing collection! I found a rare comic I was searching for years. Packaging and delivery were perfect."
+        rating={4}
       />
     </div>
   );
