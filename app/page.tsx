@@ -1,4 +1,5 @@
-'use client'
+"use client";
+import HeroBanner from "./_components/Banner/HeroBanner";
 import ComicCard from "./_components/shared/comicCard";
 import TestimonialCard from "./_components/shared/testimonialCard";
 
@@ -23,6 +24,9 @@ export default function Home() {
         review="Amazing collection! I found a rare comic I was searching for years. Packaging and delivery were perfect."
         rating={4}
       />
+    
+      <HeroBanner />
+
     </div>
   );
 }

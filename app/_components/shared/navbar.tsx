@@ -32,6 +32,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center">
             <div className="py-2 shrink-0">
+              <Link href="/" >
               <Image
                 src="/logo.png"
                 alt="Logo"
@@ -39,6 +40,7 @@ const Navbar = () => {
                 height={92}
                 className="h-auto w-auto"
               />
+              </Link>
             </div>
 
             <div className="hidden md:flex max-w-md bg-white text-black rounded-md items-center px-2 py-1 flex-1 mx-4 lg:mx-8">
