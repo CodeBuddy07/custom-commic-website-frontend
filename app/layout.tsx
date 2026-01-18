@@ -21,14 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${MontserratFont.variable} antialiased`}
-      >
-        <Navbar/>
-        <div>
-          {children}
-        </div>
-        <Footer/>
+      <body className={`${MontserratFont.variable} antialiased`}>
+        <Navbar />
+        <div className="bg-white">{children}</div>
+        <Footer />
       </body>
     </html>
   );
