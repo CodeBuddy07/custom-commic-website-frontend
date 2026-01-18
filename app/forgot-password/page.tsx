@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
+import BackToHomeButton from "../_components/BackToHomeButton";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -20,12 +22,15 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
+
       <div className="w-full max-w-sm">
+        
         {!isSubmitted ? (
           <>
             {/* Header */}
             <div className="mb-8">
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              <h1 className="text-2xl font-bold text-gray-900 mb-2 flex items-start">
+                <BackToHomeButton />
                 Forgot Password
               </h1>
               <p className="text-gray-600 text-sm">
@@ -131,7 +136,7 @@ export default function ForgotPasswordPage() {
                 Check Your Email
               </h2>
               <p className="text-gray-600 text-center text-sm mb-6">
-                We've sent a verification code to
+                We&apos;ve sent a verification code to
                 <br />
                 <span className="font-semibold text-gray-900">{email}</span>
               </p>
@@ -148,7 +153,7 @@ export default function ForgotPasswordPage() {
                   onClick={() => setIsSubmitted(false)}
                   className="w-full text-gray-600 hover:text-gray-800 py-2 text-sm font-medium transition-colors"
                 >
-                  Didn't receive the email? Resend
+                  Didn&apos;t receive the email? Resend
                 </button>
 
                 <div className="pt-2 text-center">

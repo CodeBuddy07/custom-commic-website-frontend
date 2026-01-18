@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
+import BackToHomeButton from "../_components/BackToHomeButton";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -19,7 +21,10 @@ export default function LoginPage() {
         <div className="bg-white rounded-2xl p-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome!</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2 flex items-start">
+              <BackToHomeButton />
+              Welcome!
+            </h1>
             <p className="text-gray-600 text-sm">
               Allow existing users to securely access their account
             </p>

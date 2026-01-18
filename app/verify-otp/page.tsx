@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState, useRef, useEffect } from "react";
+import BackToHomeButton from "../_components/BackToHomeButton";
 
 export default function VerifyOTPPage() {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(59);
   const [isResending, setIsResending] = useState(false);
-  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+  const inputRefs = [useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null)];
 
   useEffect(() => {
     if (timer > 0) {
@@ -35,13 +37,13 @@ export default function VerifyOTPPage() {
     }
   };
 
-  const handlePaste = (e) => {
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>): void => {
     e.preventDefault();
-    const pastedData = e.clipboardData.getData("text").slice(0, 4).split("");
-    const newOtp = [...otp];
+    const pastedData: string[] = e.clipboardData.getData("text").slice(0, 4).split("");
+    const newOtp: string[] = [...otp];
 
-    pastedData.forEach((char:any, index: any) => {
-      if (index < 4 && !isNaN(char)) {
+    pastedData.forEach((char: string, index: number) => {
+      if (index < 4 && !isNaN(Number(char))) {
         newOtp[index] = char;
       }
     });
@@ -49,7 +51,7 @@ export default function VerifyOTPPage() {
     setOtp(newOtp);
 
     // Focus last filled input or next empty
-    const lastFilledIndex = newOtp.findIndex((val) => val === "");
+    const lastFilledIndex: number = newOtp.findIndex((val: string) => val === "");
     if (lastFilledIndex !== -1) {
       inputRefs[lastFilledIndex].current?.focus();
     } else {
@@ -82,7 +84,8 @@ export default function VerifyOTPPage() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2 flex items-start">
+            <BackToHomeButton />
             Verification Code
           </h1>
           <p className="text-gray-600 text-sm">
@@ -110,7 +113,7 @@ export default function VerifyOTPPage() {
         {/* Resend Code Section */}
         <div className="text-center mb-6">
           <p className="text-sm text-gray-600 mb-1">
-            Didn't receive the code?{" "}
+            Didn&apos;t receive the code?{" "}
             {timer > 0 ? (
               <span className="text-red-500 font-medium cursor-not-allowed">
                 Resend code

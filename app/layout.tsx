@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Navbar from "./_components/shared/navbar";
-import Footer from "./_components/shared/footer";
+
 
 const MontserratFont = Montserrat({
   variable: "--font-montserrat",
@@ -20,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${MontserratFont.variable} antialiased`}>
-        <Navbar />
-        <div className="bg-white">{children}</div>
-        <Footer />
+    <html lang="en">      
+      <body className={`${MontserratFont.variable} antialiased`} >
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   );

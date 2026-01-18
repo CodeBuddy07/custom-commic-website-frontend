@@ -1,4 +1,5 @@
 import EraCard from "../EraCard/EraCard";
+import SectionHeading from "../shared/SectionHeading";
 
 const BrowseByEra = () => {
   const eras = [
@@ -11,22 +12,19 @@ const BrowseByEra = () => {
     {
       id: 2,
       title: "GOLDEN AGE",
-      image:
-        "/browse-by-era3.png",
+      image: "/browse-by-era3.png",
       altText: "Golden age library",
     },
     {
       id: 3,
       title: "SILVER AGE",
-      image:
-        "/browse-by-era2.png",
+      image: "/browse-by-era2.png",
       altText: "Silver age collection",
     },
     {
       id: 4,
       title: "BRONZE AGE",
-      image:
-        "/browse-by-era1.png",
+      image: "/browse-by-era1.png",
       altText: "Bronze age comics",
     },
   ];
@@ -34,9 +32,7 @@ const BrowseByEra = () => {
   return (
     <div className="bg-gray-100 pb-30 pt-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-medium text-gray-900 mb-10">
-          BROWSE BY ERA
-        </h2>
+        <SectionHeading title="Browse by Era" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {eras.map((era) => (
             <EraCard

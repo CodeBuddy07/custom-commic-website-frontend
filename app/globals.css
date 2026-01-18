@@ -46,4 +46,83 @@ body {
   .mySwiper {
     padding-bottom: 1.5rem;
   }
+
+  .marquee-item {
+    max-width: 300px;
+  }
+
+  .marquee-track {
+    gap: 14px;
+  }
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 16px;
+  animation: marquee 30s linear infinite;
+  width: fit-content;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 480px) {
+  .marquee-item {
+    max-width: 280px;
+  }
+
+  .marquee-track {
+    gap: 12px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 6px));
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .marquee-item {
+    max-width: 320px;
+  }
+
+  .marquee-track {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-item {
+    max-width: 550px;
+  }
+
+  .marquee-track {
+    gap: 18px;
+  }
 }

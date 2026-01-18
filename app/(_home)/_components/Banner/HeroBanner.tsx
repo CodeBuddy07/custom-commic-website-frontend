@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function HeroBanner() {
   return (
-    <section className="bg-gray-50 py-8 sm:py-12 md:py-16 px-4 w-full">
+    <section className="bg-gray-50 py-8 sm:py-12 md:py-16 px-4 w-full ">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <div className="order-2 lg:order-1">
