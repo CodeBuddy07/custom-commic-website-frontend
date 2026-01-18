@@ -1,7 +1,7 @@
 "use client";
 import { Clock, Star } from "lucide-react";
-import ReviewCard from "../_components/shared/reviewCard";
 import { useState } from "react";
+import ReviewCard from "../_components/shared/reviewCard";
 
 const ComicProductPage = () => {
   const [selectedImage, setSelectedImage] = useState(0);
